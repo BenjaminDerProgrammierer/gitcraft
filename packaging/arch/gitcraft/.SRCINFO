@@ -25,6 +25,7 @@ pkgbase = gitcraft
 	optdepends = xdg-utils: open links in the default browser
 	optdepends = git-lfs: Git LFS support
 	conflicts = gitcraft-bin
+	options = !lto
 	source = git+https://github.com/JKamsker/gitcraft.git#commit=3df3711bdf7059ca456f68138a859d31daedd1ca
 	sha256sums = SKIP
 

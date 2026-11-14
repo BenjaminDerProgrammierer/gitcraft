@@ -10,6 +10,8 @@ depends=('git' 'gcc-libs' 'glibc' 'alsa-lib' 'libxkbcommon' 'libx11'
          'libxcursor' 'libxi' 'libxrandr' 'wayland')
 makedepends=('cargo' 'pkgconf')
 conflicts=('gitcraft-bin')
+# Cargo enables thin LTO itself; GCC LTO objects from bundled C cannot link with rust-lld.
+options=('!lto')
 optdepends=('vulkan-driver: Vulkan graphics backend'
             'mesa: OpenGL graphics backend'
             'org.freedesktop.secrets: save connection credentials'
